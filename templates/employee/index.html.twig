@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EmployeeController!{% endblock %}
+
+{% block body %}
+    {{ form (form) }}
+<table border="1">
+    <thead>
+<th>cin</th>
+<th>nom</th>
+<th>prenom</th>
+    <th>solde conge</th>
+    </thead>
+    <tbody>
+{% for e in emp %}
+    <tr>
+<td>{{ e.cin }}</td>
+        <td>{{ e.nom }}</td>
+        <td>{{ e.prenom }}</td>
+        <td>{{ e.soldeConge }}</td>
+
+
+        </td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
